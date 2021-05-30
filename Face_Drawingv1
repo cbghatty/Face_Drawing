@@ -1,0 +1,60 @@
+import turtle
+t=turtle.Turtle()
+
+
+class face:
+  def pos(self,x,y):
+   t.penup()
+   t.setpos(int(x), int(y))
+   t.pendown()
+  def fcircle(self,r):
+    t.circle(r)
+  def rhair(self):
+    for g in range(5):
+     t.penup()
+     t.left(90)
+     t.forward(6)
+     t.right(90)
+     t.forward(1)
+     t.pendown()
+     for i in range(6):
+       t.forward(1)
+       t.right(90)
+       t.forward(1)
+       t.left(90)
+  def lhair(self):
+    for g in range(5):
+     t.penup()
+     t.right(90)
+     t.forward(6)
+     t.left(90)
+     t.forward(1)
+     t.pendown()
+     for i in range(6):
+       t.forward(1)
+       t.left(90)
+       t.forward(1)
+       t.right(90)
+
+
+#Declaration
+f=face()
+
+#Input
+
+#Logic
+
+#Output
+f.fcircle(15)
+f.fcircle(40)
+f.pos(20,45)
+f.fcircle(10)
+f.pos(-19,45)
+f.fcircle(10)
+f.pos(0,35)
+f.fcircle(5)
+f.pos(0,70)
+f.rhair()
+f.pos(0,70)
+t.right(180)
+f.lhair()
